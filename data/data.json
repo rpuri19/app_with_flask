@@ -1,11 +1,1 @@
-[
-    {"id": 1, "author": "John Doe", "title": "First Post", "content": "This is my first post."},
-    {"id": 2, "author": "Jane Doe", "title": "Second Post", "content": "This is another post."},
-    {"id": 3, "author": "John Doe", "title": "First Post", "content": "This is my first post."},
-    {"id": 4, "author": "Jane Doe", "title": "Second Post", "content": "This is another post."},
-    {"id": 5, "author": "John Doe", "title": "First Post", "content": "This is my first post."},
-    {"id": 6, "author": "Jane Doe", "title": "Second Post", "content": "This is another post."},
-    {"id": 7, "author": "John Doe", "title": "First Post", "content": "This is my first post."},
-    {"id": 8, "author": "Jane Doe", "title": "Second Post", "content": "This is another post."},
-    {"id": 9, "author": "John Doe", "title": "First Post", "content": "This is my first post."}
-]
+[{"id": 2, "author": "Jane Doe", "title": "Second Post", "content": "This is another post."}, {"id": 3, "author": "John Doe", "title": "First Post", "content": "This is my first post."}, {"id": 4, "author": "Jane Doe", "title": "Second Post", "content": "This is another post."}, {"id": 5, "author": "John Doe", "title": "First Post", "content": "This is my first post."}, {"id": 6, "author": "Jane Doe", "title": "Second Post", "content": "This is another post."}, {"id": 7, "author": "John Doe", "title": "First Post", "content": "This is my first post."}, {"id": 8, "author": "Jane Doe", "title": "Second Post", "content": "This is another post."}, {"id": 9, "author": "John Doe", "title": "First Post", "content": "This is my first post."}, {"id": 10, "author": "rpuri", "title": "just do it", "content": "just another post"}]
