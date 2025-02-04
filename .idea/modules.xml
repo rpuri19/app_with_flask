@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/app_with_flask.iml" filepath="$PROJECT_DIR$/.idea/app_with_flask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../codio_jinja/.idea/codio_jinja.iml" filepath="$PROJECT_DIR$/../../codio_jinja/.idea/codio_jinja.iml" />
     </modules>
   </component>
 </project>

@@ -58,7 +58,6 @@ def delete(post_id):
 
 @app.route('/update/<int:post_id>', methods=['GET', 'POST'])
 def update(post_id):
-    # Load all blog posts
     blog_posts = load_blog_posts()
 
     # Find the post by its ID (directly in the update function)
