@@ -11,7 +11,9 @@ def load_blog_posts():
 
 def save_blog_post(blog_posts):
     with open("data/data.json", "w") as file:
-        return json.dump(blog_posts, file)
+        json.dump(blog_posts, file)
+    print("Posts saved:", blog_posts)  # Debugging line to show what is being saved
+
 
 @app.route('/')
 def index():
@@ -53,6 +55,49 @@ def delete(post_id):
     save_blog_post(new_list_of_blog_posts)
     return redirect(url_for('index'))
 
+
+@app.route('/update/<int:post_id>', methods=['GET', 'POST'])
+def update(post_id):
+    # Load all blog posts
+    blog_posts = load_blog_posts()
+
+    # Find the post by its ID (directly in the update function)
+    post = None
+    for p in blog_posts:
+        if p['id'] == post_id:
+            post = p
+            break
+
+    # If the post is not found, return a 404 error
+    if post is None:
+        return "Post not found", 404
+
+    # Handle POST request (form submission)
+    if request.method == 'POST':
+        # Get updated values from the form
+        new_author = request.form['author']
+        new_title = request.form['title']
+        new_content = request.form['content']
+
+        # Debugging: Show the updated data before saving
+        print(f"Updating post {post_id}: author={new_author}, title={new_title}, content={new_content}")
+
+        # Update the post with the new values
+        post['author'] = new_author
+        post['title'] = new_title
+        post['content'] = new_content
+
+        # Save the updated blog posts list back to the file
+        save_blog_post(blog_posts)
+
+        # Debugging: Confirm save action
+        print("Post saved. Redirecting to home...")
+
+        return redirect(url_for('index'))
+
+    # Handle GET request (render the update form)
+    else:
+        return render_template('update.html', post=post)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)
